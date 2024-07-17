@@ -18,8 +18,17 @@ public class follow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position,target.position,speed * Time.deltaTime);
 
+        if (Vector2.Distance(transform.position,target.position) > minimumdistance)
+
+        {
+
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+
+        }
+
+        
+        
         
     }
 }
